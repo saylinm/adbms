@@ -1,0 +1,219 @@
+﻿> use s190318586;
+switched to db s190318586
+#SHOWING COLLECTIONS
+> show collections;
+Instructor
+bookshop
+1.INSERTING RECOREDS
+INPUT
+> db.bookshop.insert({cust_id:"B1",c_name:"Sayli",book_name:"Twisted Love",series:"Twisted",price:230,status:"A",pay_method:"card"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B1",c_name:"Sayli",book_name:"Twisted Games",series:"Twisted",price:250,status:"A",pay_method:"card"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B1",c_name:"Sayli",book_name:"Twisted Hate",series:"Twisted",price:250,status:"A",pay_method:"card"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B1",c_name:"Sayli",book_name:"Twisted Lies",series:"Twisted",price:250,status:"A",pay_method:"card"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B2",c_name:"Shruti",book_name:"Book Lovers",series:"Standalone",price:200,status:"A",pay_method:"cash"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B2",c_name:"Shruti",book_name:"Verity",series:"Standalone",price:270,status:"R",pay_method:"online"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B3",c_name:"Vaibhavi",book_name:"The Predator",series:"Dark Verse",price:190,status:"A",pay_method:"online"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B3",c_name:"Vaibhavi",book_name:"The Reaper",series:"Dark Verse",price:230,status:"A",pay_method:"online"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B3",c_name:"Vaibhavi",book_name:"The Emperor",series:"Dark Verse",price:250,status:"A",pay_method:"cash"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B3",c_name:"Vaibhavi",book_name:"The Finisher",series:"Dark Verse",price:250,status:"R",pay_method:"card"});
+WriteResult({ "nInserted" : 1 })
+> db.bookshop.insert({cust_id:"B3",c_name:"Vaibhavi",book_name:"The Annihilator",series:"Dark Verse",price:270,status:"A",pay_method:"cash"});
+WriteResult({ "nInserted" : 1 })
+OUTPUT
+> db.bookshop.find().pretty();
+{
+        "_id" : ObjectId("6528707d7eb4e840772ff54d"),
+        "cust_id" : "B1",
+        "c_name" : "Sayli",
+        "book_name" : "Twisted Love",
+        "series" : "Twisted",
+        "price" : 230,
+        "status" : "A",
+        "pay_method" : "card"
+}
+{
+        "_id" : ObjectId("652870977eb4e840772ff54e"),
+        "cust_id" : "B1",
+        "c_name" : "Sayli",
+        "book_name" : "Twisted Games",
+        "series" : "Twisted",
+        "price" : 250,
+        "status" : "A",
+        "pay_method" : "card"
+}
+{
+        "_id" : ObjectId("652870a57eb4e840772ff54f"),
+        "cust_id" : "B1",
+        "c_name" : "Sayli",
+        "book_name" : "Twisted Hate",
+        "series" : "Twisted",
+        "price" : 250,
+        "status" : "A",
+        "pay_method" : "card"
+}
+{
+        "_id" : ObjectId("652870b37eb4e840772ff550"),
+        "cust_id" : "B1",
+        "c_name" : "Sayli",
+        "book_name" : "Twisted Lies",
+        "series" : "Twisted",
+        "price" : 250,
+        "status" : "A",
+        "pay_method" : "card"
+}
+{
+        "_id" : ObjectId("652870eb7eb4e840772ff551"),
+        "cust_id" : "B2",
+        "c_name" : "Shruti",
+        "book_name" : "Book Lovers",
+        "series" : "Standalone",
+        "price" : 200,
+        "status" : "A",
+        "pay_method" : "cash"
+}
+{
+        "_id" : ObjectId("652871317eb4e840772ff552"),
+        "cust_id" : "B2",
+        "c_name" : "Shruti",
+        "book_name" : "Verity",
+        "series" : "Standalone",
+        "price" : 270,
+        "status" : "R",
+        "pay_method" : "online"
+}
+{
+        "_id" : ObjectId("6528719d7eb4e840772ff553"),
+        "cust_id" : "B3",
+        "c_name" : "Vaibhavi",
+        "book_name" : "The Predator",
+        "series" : "Dark Verse",
+        "price" : 190,
+        "status" : "A",
+        "pay_method" : "online"
+}
+{
+        "_id" : ObjectId("652871b67eb4e840772ff554"),
+        "cust_id" : "B3",
+        "c_name" : "Vaibhavi",
+        "book_name" : "The Reaper",
+        "series" : "Dark Verse",
+        "price" : 230,
+        "status" : "A",
+        "pay_method" : "online"
+}
+{
+        "_id" : ObjectId("652871dc7eb4e840772ff555"),
+        "cust_id" : "B3",
+        "c_name" : "Vaibhavi",
+        "book_name" : "The Emperor",
+        "series" : "Dark Verse",
+        "price" : 250,
+        "status" : "A",
+        "pay_method" : "cash"
+}
+{
+        "_id" : ObjectId("652872077eb4e840772ff556"),
+        "cust_id" : "B3",
+        "c_name" : "Vaibhavi",
+        "book_name" : "The Finisher",
+        "series" : "Dark Verse",
+        "price" : 250,
+        "status" : "R",
+        "pay_method" : "card"
+}
+{
+        "_id" : ObjectId("652872497eb4e840772ff557"),
+        "cust_id" : "B3",
+        "c_name" : "Vaibhavi",
+        "book_name" : "The Annihilator",
+        "series" : "Dark Verse",
+        "price" : 270,
+        "status" : "A",
+        "pay_method" : "cash"
+}
+2.CREATING MAP FUNCTION
+> var mapFunction1 = function(){emit(this.cust_id,this.price);};
+
+
+2.CREATING REDUCE FUNCTION
+> var reduceFunction1 = function(keyCust_Id,valuesPrice){return Array.sum (valuesPrice);};
+
+
+3.CREATING MAP REDUCE FUNCTION(WITH QUERY)
+INPUT
+> db.bookshop.mapReduce(mapFunction1,reduceFunction1,{ query:{status:"A"},out:"map_example_1"});
+{ "result" : "map_example_1", "ok" : 1 }
+OUTPUT
+> db.map_example_1.find().pretty();
+{ "_id" : "B2", "value" : 200 }
+{ "_id" : "B1", "value" : 980 }
+{ "_id" : "B3", "value" : 940 }
+
+
+4..CREATING MAP REDUCE FUNCTION(WITHOUT QUERY)
+INPUT
+> db.bookshop.mapReduce(mapFunction1,reduceFunction1,{ out:"map_example_1"});
+{ "result" : "map_example_1", "ok" : 1 }
+OUTPUT
+> db.map_example_1.find().pretty();
+{ "_id" : "B2", "value" : 470 }
+{ "_id" : "B1", "value" : 980 }
+{ "_id" : "B3", "value" : 1190 }
+
+
+AGGREGATE FUNCTIONS
+
+
+5.SUM FUNCTION
+INPUT
+> db.bookshop.aggregate([{$group:{_id:"$cust_id",total:{$sum:"$price"}}}]);
+OUTPUT
+{ "_id" : "B1", "total" : 980 }
+{ "_id" : "B2", "total" : 470 }
+{ "_id" : "B3", "total" : 1190 }
+
+
+6.MIN FUNCTION
+INPUT
+> db.bookshop.aggregate([{$group:{_id:"$cust_id",total:{$min:"$price"}}}]);
+OUTPUT
+{ "_id" : "B1", "total" : 230 }
+{ "_id" : "B2", "total" : 200 }
+{ "_id" : "B3", "total" : 190 }
+
+
+7.MAX FUNCTION
+INPUT
+> db.bookshop.aggregate([{$group:{_id:"$cust_id",total:{$max:"$price"}}}]);
+OUTPUT
+{ "_id" : "B3", "total" : 270 }
+{ "_id" : "B2", "total" : 270 }
+{ "_id" : "B1", "total" : 250 }
+
+
+8.AVERAGE FUNCTION
+INPUT
+> db.bookshop.aggregate([{$group:{_id:"$cust_id",total:{$avg:"$price"}}}]);
+OUTPUT
+{ "_id" : "B1", "total" : 245 }
+{ "_id" : "B2", "total" : 235 }
+{ "_id" : "B3", "total" : 238 }
+
+
+9.MATCH FUNCTION
+INPUT
+> db.bookshop.aggregate([{$match:{series:"Twisted"}}]);
+OUTPUT
+{ "_id" : ObjectId("6528707d7eb4e840772ff54d"), "cust_id" : "B1", "c_name" : "Sayli", "book_name" : "Twisted Love", "series" : "Twisted", "price" : 230, "status" : "A", "pay_method" : "card" }
+{ "_id" : ObjectId("652870977eb4e840772ff54e"), "cust_id" : "B1", "c_name" : "Sayli", "book_name" : "Twisted Games", "series" : "Twisted", "price" : 250, "status" : "A", "pay_method" : "card" }
+{ "_id" : ObjectId("652870a57eb4e840772ff54f"), "cust_id" : "B1", "c_name" : "Sayli", "book_name" : "Twisted Hate", "series" : "Twisted", "price" : 250, "status" : "A", "pay_method" : "card" }
+{ "_id" : ObjectId("652870b37eb4e840772ff550"), "cust_id" : "B1", "c_name" : "Sayli", "book_name" : "Twisted Lies", "series" : "Twisted", "price" : 250, "status" : "A", "pay_method" : "card" }
